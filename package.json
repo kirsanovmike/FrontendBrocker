@@ -8,12 +8,13 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
+    "init": "npm install -g @quasar/cli && npm install",
     "build": "quasar build",
     "start": "node server.js",
     "heroku-postbuild": "yarn && yarn build"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
+    "@quasar/extras": "^1.9.5",
     "axios": "^0.18.1",
     "connect-history-api-fallback": "^1.6.0",
     "core-js": "^3.6.5",
