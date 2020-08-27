@@ -91,8 +91,6 @@ export default {
       essentialLinks: linksData
     }
   },
-  methods() {
-  //lolol
-  }
+  methods() {}
 }
 </script>
