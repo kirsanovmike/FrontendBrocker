@@ -11,7 +11,7 @@
     "init": "npm install -g @quasar/cli && npm install",
     "build": "quasar build",
     "start": "node server.js",
-    "heroku-postbuild": "yarn && yarn build"
+    "heroku-postbuild": "yarn install && yarn start && yarn build"
   },
   "dependencies": {
     "@quasar/extras": "^1.9.5",
