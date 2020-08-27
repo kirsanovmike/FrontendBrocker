@@ -9,7 +9,11 @@ const routes = [
     name: "Home",
     component: () => import("layouts/MainLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/Home.vue") },
+      {
+        path: "",
+        name: "Home",
+        component: () => import("pages/Home.vue")
+      },
       {
         path: "brokers",
         name: "Brokers",
@@ -25,6 +29,11 @@ const routes = [
         name: "Reviews",
         component: () => import("pages/Reviews.vue")
       },
+      {
+        path: "reviews/broker",
+        name: "BrokerReview",
+        component: () => import("../views/BrokerReview.vue")
+      }
     ]
   },
   // Always leave this as last one,

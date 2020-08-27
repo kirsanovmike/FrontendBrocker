@@ -10,10 +10,8 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-
-        <q-toolbar-title >
-          
-        </q-toolbar-title>
+        
+        <router-link class="link" tag="q-toolbar-title" to="/" v-html="`АВС-рейтинг`" />
 
       </q-toolbar>
       <q-tabs align="left">
@@ -94,3 +92,9 @@ export default {
   methods() {}
 }
 </script>
+
+<style lang="stylus" scoped>
+.link{
+  cursor: pointer;
+}
+</style>

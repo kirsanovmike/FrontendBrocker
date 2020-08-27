@@ -6,7 +6,7 @@
       </div>
 
       <div class="text-h2" style="opacity:.5">
-        Oops. Nothing here...
+        Упс. Здесь ничего нет...
       </div>
 
       <q-btn
@@ -15,7 +15,7 @@
         text-color="white"
         unelevated
         to="/"
-        label="Go Home"
+        label="Домой"
         no-caps
       />
     </div>
