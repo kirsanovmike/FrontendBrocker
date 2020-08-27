@@ -51,10 +51,10 @@ export default {
   }),
   props: {}, 
   methods: {
-    print(){
+    // print(){
       // console.log("this.data = ", this.data);
       // console.log("this.brokers = ", this.brokers);
-    }
+    // }
   },
   created() {
     // console.log("created");
