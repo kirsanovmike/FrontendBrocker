@@ -8,8 +8,14 @@
           </div>
 
           <div class="text-subtitle1">
-            
-            <q-rating v-model="review.mark" :max="review.marks" size="32px" />
+            <q-rating
+              v-model="review.mark"
+              :max="review.marks"
+              size="32px"
+              :color="ratingColors"
+              readonly
+              no-dimming
+            />
           </div>
         </q-card-section>
 
@@ -28,6 +34,13 @@ export default {
   data: () => ({
     brkName: "",
     reviews: [],
+    ratingColors: [
+      "yellow-3",
+      "yellow-4",
+      "yellow-6",
+      "yellow-8",
+      "yellow-10",
+    ],
   }),
   props: {},
   created() {
@@ -35,25 +48,26 @@ export default {
     this.$axios
       .get("/brk")
       .then((resp) => {
-        this.reviews = resp.data[0].reviews;
-        this.brkName = resp.data[0].name;
+        this.reviews = resp.data[this.$route.params.id].reviews;
+        this.brkName = resp.data[this.$route.params.id].name;
         // console.log(resp.data[0].name)
       })
       .catch((err) => {
         console.log(err);
       });
-    // console.log("this.$route.params.id =", this.$route.params.id);
-    // this.brkName = this.$route.params.id;
-    // this.$axios.get("/brk", { params: { id: this.$route.params.id } });
+    // That's right responce for API, make it as soon as possible!
+    // this.$axios.get("/brk", { params: { id: this.$route.params.id } }).then((resp) => {
+    // console.log(resp.data)
+    // });
   },
 };
 </script>
 
 <style scoped>
-.my-card{
+.my-card {
   width: 70%;
   margin: 15px;
-  align-content: "center"
+  align-content: "center";
   /* max-width: 500px; */
 }
 </style>

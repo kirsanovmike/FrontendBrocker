@@ -5,8 +5,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: "",
     component: () => import("layouts/MainLayout.vue"),
     children: [
       {
@@ -25,12 +24,12 @@ const routes = [
         component: () => import("pages/About.vue")
       },
       {
-        path: "reviews",
+        path: "reviews-brokers",
         name: "Reviews",
         component: () => import("pages/Reviews.vue")
       },
       {
-        path: "reviews/broker",
+        path: "reviews-brokers/:id",
         name: "BrokerReview",
         component: () => import("../views/BrokerReview.vue")
       }

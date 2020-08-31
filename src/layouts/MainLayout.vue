@@ -11,12 +11,12 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
         
-        <router-link class="link" tag="q-toolbar-title" to="/" v-html="`АВС-рейтинг`" />
+        <router-link class="link" tag="q-toolbar-title" to="/" v-html="`АВС-Rating - Брокеры`" />
 
       </q-toolbar>
       <q-tabs align="left">
         <q-route-tab to="/brokers" label="Брокерские компании" />
-        <q-route-tab to="/reviews" label="Отзывы о брокерах" />
+        <q-route-tab to="/reviews-brokers" label="Отзывы о брокерах" />
       </q-tabs>
     </q-header>
 
@@ -67,10 +67,10 @@ const linksData = [
     link: '/brokers'
   },
   {
-    title: 'Отзывы',
+    title: 'Отзывы / Форум',
     caption: 'Отзывы о брокерских компаниях',
     icon: 'chat',
-    link: '/reviews'
+    link: '/reviews-brokers'
   },
   {
     title: 'О нас',
@@ -89,7 +89,7 @@ export default {
       essentialLinks: linksData
     }
   },
-  methods() {}
+  methods: {}
 }
 </script>
 
